@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
  * Reloads component when input states changes
  * @param stateArr An array of states to watch for and reload component
  */
-function useReactWatcher(stateArr: Array<RState<any>>): any {
+function useRStateWatcher(stateArr: Array<RState<any>>): any {
     const [dummyState, setDummyState] = useState<number>(0);
     const usedWatcherIds = new Map<number, number>();
 
@@ -35,4 +35,4 @@ function useReactWatcher(stateArr: Array<RState<any>>): any {
     }, [usedWatcherIds, stateArr]);
 }
 
-export default useReactWatcher;
+export default useRStateWatcher;
