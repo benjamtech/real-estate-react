@@ -1,0 +1,59 @@
+{
+    "name": "@real-estate/react",
+    "version": "1.0.0",
+    "description": "An easy way to use @real-estate/core in React applications",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "test": "jest --config jestconfig.json",
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "tslint --project tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run lint",
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/benjamtech/real-estate-react.git"
+    },
+    "keywords": [
+        "State",
+        "management",
+        "React",
+        "React",
+        "Hook"
+    ],
+    "author": "Benjam.Tech",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/benjamtech/real-estate-react/issues"
+    },
+    "homepage": "https://github.com/benjamtech/real-estate-react#readme",
+    "peerDependencies": {
+        "@real-estate/core": "^1.0.1",
+        "react": ">=16.9.0"
+    },
+    "dependencies": {
+        "@real-estate/core": "^1.0.1",
+        "react": "^17.0.2"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.0.1",
+        "@types/react": "^17.0.19",
+        "jest": "^27.0.6",
+        "prettier": "^2.3.2",
+        "ts-jest": "^27.0.5",
+        "ts-lint": "^4.5.1",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.3.5"
+    },
+    "files": [
+        "lib/**/*"
+    ],
+    "publishConfig": {
+        "access": "public"
+    }
+}
